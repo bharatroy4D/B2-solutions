@@ -53,6 +53,30 @@ const toggleReadStatus = (book: Book): Book & { isRead: boolean } => {
 }
 console.log(toggleReadStatus(myBook));
 
+// Problem -6
+
+class Person {
+    name: string;
+    age: number;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+class Student extends Person {
+    constructor(name: string, age: number, public grade: string) {
+        super(name, age)
+
+    }
+    getDetails() {
+        return `Name:${this.name}, Age:${this.age}, Grade:${this.grade}`
+    }
+}
+const student = new Student("Alice", 20, "A");
+console.log(student.getDetails());
+
+// Problem-7
+
 
 
 
