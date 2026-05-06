@@ -22,15 +22,24 @@ console.log(reverseResult);
 // Problem-3
 type StringOrNumber = string | number;
 
-const checkType = (value: StringOrNumber): string => {
+const checkType = (value: StringOrNumber): string | number => {
     if (typeof value === "string") {
         return "string";
     } else {
         return "Number";
     }
 }
-const
+console.log(checkType(34));
 
+// Problem-4
+const user = { id: 1, name: "John Doe", age: 21 };
+
+const getProperty = <T, k extends keyof T>(obj: T, key: k): T[k] => {
+    return obj[key]
+}
+console.log(getProperty(user, "name"));
+
+// Pro
 
 
 
